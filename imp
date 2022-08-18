@@ -1,0 +1,27 @@
+
+
+
+Oozie is a JAVA Web App that accepts requests to run workflows.
+Based on Java Tomcat Servlet (requires its own machine)
+Workflows are written in xml
+There are controls and actions NODES in workflows.
+  CONTROL:
+    Start (process begin)
+    End (process ends and returns a SUCCESS)
+    Kill (die with messaging)
+    Decision (case:switch)
+    Fork:join(wait until all forked complete, continue processing at join)
+  ACTIONS:
+    Actions can be a combo of SQOOP, PIG, HIVE, JAVA MR and more
+    eMAIL (send mail)
+    SHELL (any shell script)
+    Sub-workflows (wf within wfs)
+    JAVA (runnable JAR)
+    MR
+    HDFS ops
+Workflows can be run 
+  on demand
+  on schedule
+  directly from a JAVA CLIENT API
+  when data appears in a dir (sporadic client uploads)
+Supports Kerberos and Hadoop base HDFS Auth
